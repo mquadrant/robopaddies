@@ -3,6 +3,7 @@ import {robots} from './robots'
 import CardList from './components/CardList'
 import SearchBar from './components/SearchBar'
 import Scroll from './components/Scroll'
+import ErrorBoundry from './components/ErrorBoundry';
 
 function App() {
   const [filteredRobots, setFilteredRobots] = useState([]);
@@ -38,7 +39,9 @@ function App() {
           </div>
           <hr className="border-green-200"/>
           <Scroll>
-          <CardList robots={filteredRobots}/>
+            <ErrorBoundry>
+              <CardList robots={filteredRobots}/>
+            </ErrorBoundry>
           </Scroll>
         </div>
         )
