@@ -5,9 +5,8 @@ import SearchBar from './components/SearchBar'
 import Scroll from './components/Scroll'
 import ErrorBoundry from './components/ErrorBoundry';
 
-function App() {
+function App(props) {
   const [filteredRobots, setFilteredRobots] = useState([]);
-
   useEffect(()=>{
     fetch('https://jsonplaceholder.typicode.com/users')
     .then(res=>res.json())
