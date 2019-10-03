@@ -1,26 +1,49 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React ,{useState,useEffect}from 'react';
+import {robots} from './robots'
+import CardList from './components/CardList'
+import SearchBar from './components/SearchBar'
+import Scroll from './components/Scroll'
 
 function App() {
+  const [filteredRobots, setFilteredRobots] = useState([]);
+
+  useEffect(()=>{
+    fetch('https://jsonplaceholder.typicode.com/users')
+    .then(res=>res.json())
+    .then(users=>{ 
+      setFilteredRobots(users)
+    })
+  },[])
+  const searchHandler = (e)=>{ 
+    filterRobots(e.target.value);
+  }
+
+  const filterRobots = (term)=>{
+    let re = new RegExp(term, "gi");
+    setFilteredRobots(robots.filter(robot=>{
+      return re.test(robot.name) || re.test(robot.email)
+    }))
+  }
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    !setFilteredRobots.length?(
+      <div className="text-center my-12">
+        <h1 className="text-5xl my-8">ROBOPADDIES</h1>
+        </div>
+        ):(
+          <div className="app-content">
+          <div className="text-center my-12">
+          <h1 className="text-5xl my-8">ROBOPADDIES</h1>
+          <SearchBar searchChange={searchHandler}/>
+          </div>
+          <hr className="border-green-200"/>
+          <Scroll>
+          <CardList robots={filteredRobots}/>
+          </Scroll>
+        </div>
+        )
+  )
+    
 }
 
 export default App;
