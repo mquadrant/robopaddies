@@ -44,24 +44,19 @@ function App(props) {
   }
   
   return (
-    !setFilteredRobots.length?(
-      <div className="text-center my-12">
-        <h1 className="text-5xl my-8">ROBOPADDIES</h1>
-        </div>
-        ):(
           <div className="app-content">
-          <div className="text-center my-12">
-          <h1 className="text-5xl my-8">ROBOPADDIES</h1>
-          <SearchBar searchChange={searchHandler}/>
-          </div>
+            <div className="text-center my-12">
+            <h1 className="text-5xl my-8">ROBOPADDIES</h1>
+            <SearchBar searchChange={searchHandler}/>
+            </div>
           <hr className="border-green-200"/>
+          {setFilteredRobots.length?(
           <Scroll>
             <ErrorBoundry>
               <CardList robots={filteredRobots}/>
             </ErrorBoundry>
-          </Scroll>
+          </Scroll>):null}
         </div>
-        )
   )
     
 }
