@@ -1,19 +1,37 @@
 import React ,{useState,useEffect}from 'react';
-import {robots} from './robots'
+import {connect} from 'react-redux';
 import CardList from './components/CardList'
 import SearchBar from './components/SearchBar'
 import Scroll from './components/Scroll'
 import ErrorBoundry from './components/ErrorBoundry';
 
+import {requestRobots} from './redux/action';
+
+const mapStateToProps = state => {
+  return {
+    robots: state.requestRobots.robots,
+    isPending: state.requestRobots.isPending
+  }
+}
+
+const mapDispatchToProps = dispatch => {
+ return {
+  requestForRobots: () => dispatch(requestRobots())
+}
+}
+
 function App(props) {
+  const {requestForRobots,robots} = props;
   const [filteredRobots, setFilteredRobots] = useState([]);
-  useEffect(()=>{
-    fetch('https://jsonplaceholder.typicode.com/users')
-    .then(res=>res.json())
-    .then(users=>{ 
-      setFilteredRobots(users)
-    })
-  },[])
+  
+  useEffect(()=>{ 
+    requestForRobots();
+  },[requestForRobots])
+
+  useEffect(()=>{ 
+    setFilteredRobots(robots);
+  },[robots])
+
   const searchHandler = (e)=>{ 
     filterRobots(e.target.value);
   }
@@ -48,4 +66,4 @@ function App(props) {
     
 }
 
-export default App;
+export default connect(mapStateToProps, mapDispatchToProps)(App);
