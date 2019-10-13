@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "outDir": "build/dist",
+    "module": "esnext",
+    "jsx": "react",
+    "moduleResolution": "node",
+    "target": "es5",
+    "lib": ["es6", "dom", "dom.iterable"],
+    "sourceMap": true,
+    "rootDir": "src",
+    "allowSyntheticDefaultImports": true,
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "build", "webpack", "jest", "src/setupTest.ts"]
+}
