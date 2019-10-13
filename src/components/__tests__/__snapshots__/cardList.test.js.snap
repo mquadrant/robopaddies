@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`expect to render Card component with snapshot 1`] = `
+<div
+  className="mt-8 container mx-auto flex flex-wrap justify-center"
+>
+  <Card
+    email="John@gmail.com"
+    id={1}
+    key="0"
+    name="John Doe"
+  />
+</div>
+`;

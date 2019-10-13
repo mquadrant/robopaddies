@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`expect to render Card component with snapshot 1`] = `
+<div
+  className="card flex-none inline-block bg-green-200 shadow-md p-3 m-2 rounded-lg"
+>
+  <img
+    src="https://robohash.org/undefined?size=200x200"
+  />
+  <div
+    className="my-2"
+  >
+    <h4
+      className="font-semibold text-base text-sm text-center"
+    />
+    <p
+      className="text-center text-xs"
+    />
+  </div>
+</div>
+`;
