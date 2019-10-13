@@ -1,7 +1,6 @@
 import React from 'react'
 
-export default function Card(props) {
-    const {name,email} = props;
+export default function Card({name,email}) {
     return (
         <div className="card flex-none inline-block bg-green-200 shadow-md p-3 m-2 rounded-lg">
             <img src={`https://robohash.org/${name}?size=200x200`} alt={name}/>
