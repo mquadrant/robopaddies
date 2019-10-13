@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow,mount} from 'enzyme';
 import CardList from './../CardList';
-import Card from './../Card';
+import Card from '../Card';
 
 it('expect to render the Card component', () => {
     const wrapper = shallow(<CardList />);
