@@ -7,11 +7,16 @@ import {CHANGE_SEARCH_FIELD,
 //State is read only
 //Changes using pure functions
 
+interface IAction{
+    type?:string;
+    payload?:any
+}
+
 const initialState = {
     searchField:""
 }
 
-export const searchRobots = (state=initialState,action={})=>{
+export const searchRobots = (state=initialState,action:IAction ={})=>{
 switch(action.type){
     case CHANGE_SEARCH_FIELD:
         return {
@@ -30,7 +35,7 @@ const initialStateRobots = {
     error:null
 }
 
-export const requestRobots = (state=initialStateRobots,action={})=>{
+export const requestRobots = (state=initialStateRobots,action:IAction={})=>{
 switch(action.type){
     case REQUEST_ROBOTS_SUCCESS:
         return {
