@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders app without crashing 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Connect(App)>
+    <App
+      requestForRobots={[Function]}
+      robots={Array []}
+    >
+      <MainPage
+        requestForRobots={[Function]}
+        robots={Array []}
+      >
+        <div
+          className="app-content"
+        >
+          <div
+            className="text-center my-12"
+          >
+            <h1
+              className="text-5xl my-8"
+            >
+              ROBOPADDIES
+            </h1>
+            <SearchBar
+              searchChange={[Function]}
+            >
+              <div>
+                <input
+                  className="shadow appearance-none border rounded w-36 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  name="search"
+                  onChange={[Function]}
+                  placeholder="Search Robots"
+                  type="text"
+                />
+              </div>
+            </SearchBar>
+          </div>
+          <hr
+            className="border-green-200"
+          />
+        </div>
+      </MainPage>
+    </App>
+  </Connect(App)>
+</Provider>
+`;
