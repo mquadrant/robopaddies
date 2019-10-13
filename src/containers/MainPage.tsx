@@ -6,7 +6,7 @@ import ErrorBoundry from '../components/ErrorBoundry';
 
 
 
-export default function MainPage(props) {
+export default function MainPage(props:any) {
   const {requestForRobots,robots} = props;
   const [filteredRobots, setFilteredRobots] = useState([]);
   
@@ -18,13 +18,13 @@ export default function MainPage(props) {
     setFilteredRobots(robots);
   },[robots])
 
-  const searchHandler = (e)=>{ 
+  const searchHandler = (e:React.ChangeEvent<HTMLInputElement>):void=>{ 
     filterRobots(e.target.value);
   }
 
-  const filterRobots = (term)=>{
+  const filterRobots = (term:string)=>{
     let re = new RegExp(term, "gi");
-    setFilteredRobots(robots.filter(robot=>{
+    setFilteredRobots(robots.filter((robot:any)=>{
       return re.test(robot.name) || re.test(robot.email)
     }))
   }
@@ -46,6 +46,3 @@ export default function MainPage(props) {
   )
     
 }
-
-
- 
