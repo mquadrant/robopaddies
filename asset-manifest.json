@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/robopaddies/static/css/main.7adc38f2.chunk.css",
-    "main.js": "/robopaddies/static/js/main.5c714095.chunk.js",
-    "main.js.map": "/robopaddies/static/js/main.5c714095.chunk.js.map",
+    "main.js": "/robopaddies/static/js/main.beb270a3.chunk.js",
+    "main.js.map": "/robopaddies/static/js/main.beb270a3.chunk.js.map",
     "runtime-main.js": "/robopaddies/static/js/runtime-main.0fe983dc.js",
     "runtime-main.js.map": "/robopaddies/static/js/runtime-main.0fe983dc.js.map",
-    "static/js/2.f0645170.chunk.js": "/robopaddies/static/js/2.f0645170.chunk.js",
-    "static/js/2.f0645170.chunk.js.map": "/robopaddies/static/js/2.f0645170.chunk.js.map",
+    "static/js/2.c85de431.chunk.js": "/robopaddies/static/js/2.c85de431.chunk.js",
+    "static/js/2.c85de431.chunk.js.map": "/robopaddies/static/js/2.c85de431.chunk.js.map",
     "index.html": "/robopaddies/index.html",
-    "precache-manifest.c9555fcc5d00d43c90fedf6431680a0b.js": "/robopaddies/precache-manifest.c9555fcc5d00d43c90fedf6431680a0b.js",
+    "precache-manifest.9030662e7c80cf8a804004ab003609c1.js": "/robopaddies/precache-manifest.9030662e7c80cf8a804004ab003609c1.js",
     "service-worker.js": "/robopaddies/service-worker.js",
     "static/css/main.7adc38f2.chunk.css.map": "/robopaddies/static/css/main.7adc38f2.chunk.css.map",
     "static/media/index.css": "/robopaddies/static/media/SEGA.12a3db8b.woff"
